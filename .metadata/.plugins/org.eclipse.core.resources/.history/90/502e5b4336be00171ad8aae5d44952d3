@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ex_Barrela {
+	public static void main(String[] args){
+	String msg;
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+
+	
+		System.out.println("Digite a mensagem");
+		
+		msg = sc.nextLine();
+		
+		System.out.println(msg);
+	}
+	
+}

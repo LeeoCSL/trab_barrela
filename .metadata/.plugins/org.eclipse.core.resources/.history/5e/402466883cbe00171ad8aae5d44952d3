@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class ex_Barrela {
+	
+	
+
+	
+	public static void main(String[] args){
+	String msg;
+int p1, p2;
+boolean inicio = false;
+	
+	Scanner sc = new Scanner(System.in);
+	
+
+
+	
+		System.out.println("Digite a mensagem");
+		
+		msg = sc.nextLine().toUpperCase();
+		
+		msg = msg.replace(" ", "");
+		System.out.println((msg.length()));
+//		p1 = msg.length()-2;
+//		System.out.println("p1" + p1);
+//		p2 = msg.length()-1;
+//		System.out.println("p2"+p2);
+		
+		//teste cada par de caracteres
+		for(int i = 0, j=1; i <= msg.length()-2 && j<=msg.length()-1; i++, j++){
+			
+			System.out.println("primeiro: " + msg.charAt(i) + " segundo: " + msg.charAt(j));
+		
+			//testa se é inicio ou fim da mensagem
+			if(msg.charAt(i) == '7' && msg.charAt(j) == 'E' ){
+				if(i+3 > msg.length() ){
+					System.out.println("fim da mensagem");
+				}
+				else if(inicio == false && i+3 < msg.length() ){
+					System.out.println("inicio da mensagem");
+					
+					inicio = true;
+				}
+			} // fim do teste inicio fim
+		
+//			if(msg.charAt(i) == '7' && msg.charAt(j) == 'E' ){
+//				if(i+3 < msg.length() && inicio == true){
+//				msg.charAt(i) = '7';
+//				}
+//			}
+			
+			
+		}//fim do teste de pares
+		
+		//metodo que vai imprimir
+		for(int a = 0, b = 1; a<= msg.length()-4 && b <=msg.length()-3; a++, b++){
+			System.out.print(msg.charAt(a) + msg.charAt(b));
+		}
+	}
+	
+}

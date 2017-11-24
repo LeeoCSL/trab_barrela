@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ex_Barrela {
+	public static void main(String[] args){
+	String msg;
+int p1, p2;
+	
+	Scanner sc = new Scanner(System.in);
+	
+	String temp = "ja va";
+	System.out.print(temp.replace(" ", ""));
+
+	
+		System.out.println("Digite a mensagem");
+		
+		msg = sc.nextLine().toUpperCase();
+		
+		msg.replace(" ", "");
+//		System.out.println((msg.length()));
+//		p1 = msg.length()-2;
+//		System.out.println("p1" + p1);
+//		p2 = msg.length()-1;
+//		System.out.println("p2"+p2);
+		System.out.println((msg.length()));
+		for(int e = 0; e<=msg.length()-1; e++){
+			
+			msg.replace(" ", "");
+		}
+		System.out.println((msg.length()));
+		
+		
+		for(int i = 0, j=1; i <= msg.length()-2 && j<=msg.length()-1; i++, j++){
+			
+			System.out.println("primeiro: " + msg.charAt(i) + " segundo: " + msg.charAt(j));
+		
+		
+		}
+	}
+	
+}
